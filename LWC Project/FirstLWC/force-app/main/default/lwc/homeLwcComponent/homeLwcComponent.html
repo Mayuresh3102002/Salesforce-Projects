@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="WELCOME TO STUDENT DATA MANAGER APPLICATION">
+        <ul class="slds-m-around_medium">
+            <template for:each={contacts} for:item="contact">
+                
+                {contact.Id}. <li key={contact.Id}>
+                    Name: {contact.Name} <br>
+                    Email: {contact.Email} <br>
+                    <br>
+                </li>
+            </template>
+        </ul>
+    </lightning-card>
+</template>

@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Clone Contact FORM" icon-name="standard:contact">
+        <div class="slds-m-around_medium" style="font-size: larger; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: red; color: white;">{successMessage}</div>
+        <lightning-record-form  
+            record-id={recordId}
+            object-api-name={objectApiName}
+            onsubmit={handleSuccess}
+            layout-type="Full"
+            mode="edit"
+            columns="6"
+            >
+        </lightning-record-form>
+    </lightning-card>
+</template>

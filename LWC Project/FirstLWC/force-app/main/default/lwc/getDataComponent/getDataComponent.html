@@ -1,0 +1,13 @@
+<template>
+    <lightning-button label="Load Accounts" onclick={handleLoadAccounts}></lightning-button>
+    <template if:true={accounts}>
+        <ul>
+            <template for:each={accounts} for:item="acc">
+                <li key={acc.Id}>{acc.Name}</li>
+            </template>
+        </ul>
+    </template>
+    <template if:true={error}>
+        <p>{error}</p>
+    </template>
+</template>

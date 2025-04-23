@@ -1,0 +1,5 @@
+.lightBtn {
+    background: linear-gradient(to right, #95abc1, #042b51);
+    color: white;
+    border-radius: 8px;
+}

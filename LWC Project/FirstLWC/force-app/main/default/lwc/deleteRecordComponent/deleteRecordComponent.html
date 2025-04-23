@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Delete HR Record" icon-name="custom:custom63">
+
+        <div class="slds-m-around_medium">
+            <lightning-input type="text" label="Record ID" value={recordId} onchange={handleRecordIdChange}></lightning-input>
+
+            <lightning-button label="Delete Record" onclick={handleDeleteRecord} variant="destructive"></lightning-button>
+           
+            <template if:true={errorMessage}>
+                <p class="slds-text-color_error">{errorMessage}</p>
+            </template>
+        </div>
+
+    </lightning-card>
+</template>

@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Account Information Edit Form">
+        <lightning-record-edit-form
+            object-api-name={objectApiName}
+            record-id={recordId}
+            onsuccess={handleSuccess}>
+            <lightning-input-field field-name={accountName}></lightning-input-field>
+            <lightning-input-field field-name={accountNumber}></lightning-input-field>
+            <lightning-input-field field-name={accountType}></lightning-input-field>
+            <div>
+                <lightning-button variant="brand" type="submit" label="Click here to update" onsubmit={handleResetForm} ></lightning-button>
+            </div>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>

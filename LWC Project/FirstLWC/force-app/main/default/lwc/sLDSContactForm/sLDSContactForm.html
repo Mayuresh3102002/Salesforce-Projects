@@ -1,0 +1,48 @@
+<template>
+    <lightning-card title="Contact Us" icon-name="standard:contact">
+    <div class="slds-p-around_medium">
+        <!-- Full Name -->
+        <div class="slds-form-element slds-m-bottom_medium">
+            <label class="slds-form-element__label" for="name">Full Name</label>
+            <div class="slds-form-element__control">
+                <input type="text" id="name" class="slds-input" value={fullName} onchange={handleNameChange} />
+            </div>
+        </div>
+        <!-- Email -->
+        <div class="slds-form-element slds-m-bottom_medium">
+            <label class="slds-form-element__label" for="email">Email</label>
+            <div class="slds-form-element__control">
+                <input type="email" id="email" class="slds-input" value={email} onchange={handleEmailChange} />
+            </div>
+        </div>
+        <!-- Preferred Contact Method (Radio Buttons) -->
+        <fieldset class="slds-form-element slds-m-bottom_medium">
+            <legend class="slds-form-element__legend slds-form-element__label">Preferred Contact Method</legend>
+            <div class="slds-form-element__control">
+                <label class="slds-radio">
+                    <input type="radio" name="contactMethod" value="email" checked={isEmailPreferred} onchange={handleContactChange} />
+                    <span class="slds-radio_faux"></span>
+                    <span class="slds-form-element__label">Email</span>
+                </label>
+                <label class="slds-radio">
+                <input type="radio" name="contactMethod" value="phone" checked={isPhonePreferred} onchange={handleContactChange} />
+                <span class="slds-radio_faux"></span>
+                <span class="slds-form-element__label">Phone</span>
+                </label>
+            </div>
+        </fieldset>
+        <!-- Subscribe Checkbox -->
+        <div class="slds-form-element slds-m-bottom_medium">
+            <label class="slds-checkbox">
+                <input type="checkbox" checked={subscribe} onchange={handleSubscribeChange} />
+                <span class="slds-checkbox_faux"></span>
+                <span class="slds-form-element__label">Subscribe to our newsletter</span>
+            </label>
+        </div>
+        <!-- Submit Button -->
+        <div class="slds-m-top_medium">
+            <lightning-button label="Submit" variant="brand" onclick={handleSubmit} class="lightBtn"></lightning-button>
+        </div>
+    </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Opportunity Summary" icon-name="standard:opportunity">
+        <template if:true={opportunity.data}>
+            <div class="slds-p-horizontal_small">
+                <p class="slds-text-heading_medium">Opportunity Name: {opportunityName}</p>
+                <p class="slds-text-body_regular">Opportunity Amount: {opportunityAmount}</p>
+                <p class="slds-text-body_regular">Opportunity Stage: {opportunityStage}</p>
+            </div>
+        </template>
+        <br>
+        <div class="slds-p-horizontal_small">
+            <p class="slds-text-heading_medium">Get Details (use recordId)</p>
+            <lightning-input type="text" label="Record ID" value={recordId} onchange={handleRecordIdChange}></lightning-input>
+        </div>
+        <div class="slds-p-horizontal_small">
+            <lightning-button variant="brand" label="Get full opp details" onclick={handleNavigateButton}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

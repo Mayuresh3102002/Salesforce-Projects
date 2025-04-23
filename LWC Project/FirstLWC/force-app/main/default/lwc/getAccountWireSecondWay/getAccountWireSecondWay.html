@@ -1,0 +1,16 @@
+<template>
+    <lightning-card>
+        <lightning-formatted-text value="Second way of wire decorator" label="Second way of wire decorator"></lightning-formatted-text>
+        <template if:true={contactRecord.data}>
+            <p>Name: {Name}</p>
+            <p>Email:{email}</p>
+            <p>Phone:{phone}</p>
+            <p>Account Name:{accName}</p>
+        </template>
+    
+        <template if:true={contactRecord.error}>
+            <p>Error: {contactRecord.error.message}</p>
+        </template>
+    </lightning-card>
+    
+</template>

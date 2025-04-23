@@ -1,0 +1,66 @@
+<template>
+    <lightning-card title="LDS Component" icon-name="custom:custom63">
+        <!-- Button -->
+        <div class="slds-m-around_medium">
+            <button class="slds-button slds-button_neutral neutralButtonCls">Neutral Button</button>
+            <br>
+            <br>
+            <button class="slds-button slds-button_brand brandBtn">Brand Button</button>
+            <br>
+            <br>
+            <button class="slds-button slds-button_destructive destructiveBtn">Destructive Button</button>
+        </div>
+    </lightning-card>   
+
+    <lightning-card title="Basic Label with Text Input" icon-name="custom:custom63">
+        <!-- Basic Label with Text Input -->           
+        <div class="c1">
+            <label class="c1" for="input-name">My Full Name is {fName}</label>
+            <div class="slds-form-element__control">
+                <input style="color: black;" type="text" id="input-name" class="slds-input" value={fName} placeholder="Enter your name" onchange={handleFullNameChange} />
+            </div>
+        </div>
+    </lightning-card>    
+    <lightning-card title="Checkbox" icon-name="custom:custom63">
+        <!-- Checkbox -->
+        <div class="slds-form-element">
+            <label class="slds-checkbox">
+            <input type="checkbox" name="options" />
+            <span class="slds-checkbox_faux"></span>
+            <span class="slds-form-element__label">Subscribe to newsletter</span>
+            </label>
+        </div>
+    </lightning-card>    
+    <lightning-card title="Radio Button" icon-name="custom:custom63">
+        <!-- Radio Button -->
+        <div class="slds-form-element">
+            <span class="slds-form-element__label">Select a plan</span>
+            <div class="slds-form-element__control">
+                <label class="slds-radio">
+                    <input type="radio" name="plan" value="basic" />
+                    <span class="slds-radio_faux"></span>
+                    <span class="slds-form-element__label">Basic</span>
+                </label>
+                <label class="slds-radio">
+                    <input type="radio" name="plan" value="premium" />
+                    <span class="slds-radio_faux"></span>
+                    <span class="slds-form-element__label">Premium</span>
+                </label>
+            </div>
+        </div>
+    </lightning-card>     
+    <lightning-card title="Toggle Switch" icon-name="custom:custom63">
+        <!-- Toggle Switch -->
+        <div class="slds-form-element">
+            <label class="slds-checkbox_toggle slds-grid">
+            <span class="slds-form-element__label slds-m-bottom_none">Enable notifications</span>
+            <input type="checkbox" name="toggle" />
+            <span id="toggle-desc" class="slds-checkbox_faux_container" aria-live="assertive">
+            <span class="slds-checkbox_faux"></span>
+            <span class="slds-checkbox_on">On</span>
+            <span class="slds-checkbox_off">Off</span>
+            </span>
+            </label>
+        </div>
+    </lightning-card>    
+</template>

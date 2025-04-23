@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Lightning Data Table" icon-name="custom:custom63">
+        <template if:true={contactList}>
+            <lightning-datatable
+                key-field="id"
+                data={contactList}
+                columns={columns}
+            >
+            </lightning-datatable>
+        </template>
+        <template if:true={errorMessage}>
+            <div class="slds-text-color_error slds-m-around_medium">
+                {errorMessage}
+            </div>
+        </template>
+    </lightning-card>
+</template>

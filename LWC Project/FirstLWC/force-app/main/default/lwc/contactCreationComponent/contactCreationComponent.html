@@ -1,0 +1,13 @@
+<template>
+    <lightning-card>
+        <lightning-formatted-rich-text class="slds-m-around_medium" value="Contact creation form!"></lightning-formatted-rich-text>
+
+    <lightning-input type="text" name="firstName" label="First Name" value={firstName} onchange={handleInputChange} class="slds-m-bottom_small"></lightning-input>
+    <lightning-input type="text" name="lastName" label="Last Name" value={lastName} onchange={handleInputChange} class="slds-m-bottom_small"></lightning-input>
+    <lightning-input type="text" name="email" label="Email" value={email} onchange={handleInputChange} class="slds-m-bottom_small"></lightning-input>
+    <lightning-input type="text" name="phone" label="Phone" value={phone} onchange={handleInputChange} class="slds-m-bottom_small"></lightning-input>
+
+    <lightning-button label="Create Contact Record" onclick={handleContactCreation} class="slds-m-left_x-small"></lightning-button>
+    </lightning-card>
+
+</template>
